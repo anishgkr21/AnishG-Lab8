@@ -12,9 +12,13 @@ def encode(password):
 
 def decode(encoded_password):
     decoded_password = ""
-    for char in encoded_password:
-        decoded_char = chr(ord(char)-3)
-        decoded_password += decoded_char
+    for i in encoded_password:
+        i = int(i)
+        i -= 3
+        if i < 0:
+            i += 10
+        i = str(i)
+        decoded_password += i
     return decoded_password
 
 if __name__ == '__main__':
