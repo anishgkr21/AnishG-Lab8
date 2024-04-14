@@ -3,8 +3,9 @@
 
 
 def encode(password):
-    encoded_password = ""
+    encoded_password = "" # Empty string for shifted password
     for char in password:
+        # Goes through each character and shifts it by 3
         encoded_char = chr(ord(char)+3)
         encoded_password += encoded_char
     return encoded_password
@@ -17,6 +18,7 @@ def decode(encoded_password):
     return decoded_password
 
 if __name__ == '__main__':
+    # Main menu loop
     while True:
         print(" Menu \n -------------- \n 1. Encode \n 2. Decode \n 3. Quit")
 
